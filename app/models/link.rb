@@ -1,7 +1,6 @@
 require 'securerandom'
 
 class Link < ActiveRecord::Base
-  CUSTOM_LENGTH = 4
 
   before_create :generate_custom
   before_create :set_hits
@@ -23,9 +22,35 @@ class Link < ActiveRecord::Base
 
   def generate_custom
     if self.custom.nil? || self.custom.blank?
-      self.custom = SecureRandom.hex[0 .. (CUSTOM_LENGTH-1)]
+      # get all generated
+      links = Link.where generated_custom: true
+
+      # get list of customs
+      customs = links.map { |l| l.custom.to_i 16 } .sort
+
+      # if empty, start with zero
+      if customs.empty?
+        gen = 0
+      else
+        # else, start with worst case
+        gen = customs.last + 1
+
+        # try to find better
+        customs.each_with_index do |c, i|
+          unless c == i
+            gen = i
+            break
+          end
+        end
+      end
+
+      self.custom = gen.to_s 16
+      self.generated_custom = true
     else
       self.custom.downcase!
+      self.generated_custom = false
     end
+
+    nil
   end
 end
