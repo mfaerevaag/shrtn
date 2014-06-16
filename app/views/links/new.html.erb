@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <%= form_for @link do |f| %>
+      <%= render 'shared/error_messages' %>
+
+      <%= f.url_field :url, autofocus: true, class: 'form-control input-lg', placeholder: 'url' %>
+
+      <br>
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon">frv.ag/</span>
+        <%= f.text_field :custom, class: 'form-control input-lg', placeholder: 'custom (optional)' %>
+      </div>
+
+      <br>
+      <%= f.submit "shrtn", class: "btn btn-primary btn-lg btn-block" %>
+    <% end %>
+  </div>
+</div>

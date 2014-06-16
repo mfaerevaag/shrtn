@@ -1,0 +1,9 @@
+<% if @link.errors.any? %>
+  <div class="alert alert-danger">
+    <ul>
+      <% @link.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
