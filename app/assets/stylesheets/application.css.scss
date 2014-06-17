@@ -5,38 +5,12 @@
 
 @import "bootstrap";
 
-/* variables and mixins */
-
-
-
 @mixin box_sizing {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-
-/* body */
-
-body {
-  /* color: $gray-lighter; */
-  background-color: lightgrey; //#3D6291;
-}
-
-.header {
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 25px;
-}
-
-.content {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  /* @extend .jumbotron; */
-  /* border-radius: 5px; */
-  @include box_sizing;
-
-}
 
 /* debug */
 
@@ -52,21 +26,11 @@ body {
 
 /* error */
 
+.alert {
+  text-align: left;
+}
+
 .field_with_errors {
   @extend .form-group;
   @extend .has-error;
 }
-
-
-/* background */
-
-/* body { */
-/*   background: rgb(229,229,229); /\* Old browsers *\/ */
-/*   background: -moz-radial-gradient(center, ellipse cover, rgba(229,229,229,1) 1%, rgba(229,229,229,1) 1%, rgba(163,163,163,1) 100%); /\* FF3.6+ *\/ */
-/*   background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%,rgba(229,229,229,1)), color-stop(1%,rgba(229,229,229,1)), color-stop(100%,rgba(163,163,163,1))); /\* Chrome,Safari4+ *\/ */
-/*   background: -webkit-radial-gradient(center, ellipse cover, rgba(229,229,229,1) 1%,rgba(229,229,229,1) 1%,rgba(163,163,163,1) 100%); /\* Chrome10+,Safari5.1+ *\/ */
-/*   background: -o-radial-gradient(center, ellipse cover, rgba(229,229,229,1) 1%,rgba(229,229,229,1) 1%,rgba(163,163,163,1) 100%); /\* Opera 12+ *\/ */
-/*   background: -ms-radial-gradient(center, ellipse cover, rgba(229,229,229,1) 1%,rgba(229,229,229,1) 1%,rgba(163,163,163,1) 100%); /\* IE10+ *\/ */
-/*   background: radial-gradient(ellipse at center, rgba(229,229,229,1) 1%,rgba(229,229,229,1) 1%,rgba(163,163,163,1) 100%); /\* W3C *\/ */
-/*   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#a3a3a3',GradientType=1 ); /\* IE6-9 fallback on horizontal gradient *\/ */
-/* } */

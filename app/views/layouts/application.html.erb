@@ -8,16 +8,35 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="content">
-        <div class="header">
-          <h1>shrtn</h1>
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h1 class="masthead-brand"><a href="<%= root_url %>">shrtn</a></h1>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <%= yield %>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>See the source at <a href="https://github.com/mfaerevaag/shrtn">github</a>.</p>
+              <p>Notice! We're still under development, so use at your own risk.</p>
+              <p>For issues or feedback, click the link above.</p>
+            </div>
+          </div>
+
         </div>
 
-        <%= yield %>
       </div>
 
-      <%= debug(params) if Rails.env.development? %>
     </div>
+
   </body>
 </html>
