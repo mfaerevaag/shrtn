@@ -1,4 +1,4 @@
-SHRTN
+shrtn
 =====
 
 Yet another url-shortener.
