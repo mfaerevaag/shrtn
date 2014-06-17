@@ -1,10 +1,15 @@
+<% provide :new_url, current_host + @link.custom %>
+
 <div class="row">
   <div class="col-md-8 col-md-offset-2">
-    <form role="form">
-      <input type="text"
-             class="form-control input-lg"
-             autofocus="autofocus"
-             value="<%= current_host + @link.custom %>">
-    </form>
+    <div class="input-group input-group-lg">
+      <input id="new-url" class="form-control" type="text"
+             autofocus="autofocus" value=<%= yield :new_url %>>
+      <span class="input-group-btn">
+        <button id="copy" class="btn btn-primary" type="button"
+                data-clipboard-target="new-url"
+                data-clipboard-text=<%= yield :new_url %>>copy</button>
+      </span>
+    </div>
   </div>
 </div>

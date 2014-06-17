@@ -20,6 +20,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sass-rails', '~> 4.0.3'
 gem 'bootstrap-sass', '~> 3.1.1'
+gem 'zeroclipboard-rails', '~> 0.0.13'
 
 group :test do
   gem 'sdoc', '~> 0.4.0', require: false
