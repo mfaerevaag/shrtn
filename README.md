@@ -1,6 +1,6 @@
 shrtn
 =====
 
-[![Build Status](http://69.28.95.123:8080/job/shrtn/badge/icon)](http://69.28.95.123:8080/job/shrtn/)
+[![Build Status](http://ci.faerevaag.no/buildStatus/icon?job=shrtn)](http://ci.faerevaag.no/buildStatus/icon?job=shrtn)
 
 Yet another url-shortener.
